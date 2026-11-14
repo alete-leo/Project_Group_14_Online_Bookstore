@@ -1,0 +1,5 @@
+To start the development server, run: npm run dev 
+Accessible at http://localhost:5173/
+
+I've moved some things around from the original react build, so it may not be functional currently.
+Currently figuring out a way to get our database shared over github.
