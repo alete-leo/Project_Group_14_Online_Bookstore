@@ -1,9 +1,9 @@
-import express from "express";
-import bodyParser from "body-parser";
-import pg from "pg";
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./components/App";
+import "./../public/styles.css";
 
-//const app = express();
-//const port = 3000;
+import Client from "pg";
 
 const db = new pg.Client({
     user: "postgres",
@@ -16,9 +16,12 @@ const db = new pg.Client({
 
 db.connect();
 
+// I'm going to try fetching all data and displaying it in a table just so we can make sure we have the data
+
+db.query("SELECT * FROM books", (err, res) => {
+    
+})
+
 
 ReactDOM.render(<App />, document.getElementById("root"));
-// sample
-
-
-// I tried to merge this with the jsx, but didn't think of how the frontend framework would crash. 
+// sample+3
