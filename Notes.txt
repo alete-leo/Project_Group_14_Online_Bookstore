@@ -9,6 +9,20 @@ For our database, we'll likely have to store our SQL scripts we used and individ
 I'll get the code linking the project to the database in later. 
 
 
-
+cd .\my-react-app\
 nodemon server/server.js
+
+cd .\my-react-app\
 npm run dev
+
+-- to change postgres password btw, on windows, search psql to open the shell, and run 
+ALTER USER username WITH PASSWORD 'newpassword';
+ALTER USER postgres WITH PASSWORD 'postgres';
+
+const db = new pg.Client({
+    user: "postgres",
+    host: "localhost",
+    database: "BookstoreDB",
+    password: "postgres",
+    port: 5432,
+});
