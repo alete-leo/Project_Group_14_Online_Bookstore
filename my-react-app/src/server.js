@@ -18,6 +18,11 @@ const db = new pg.Client({
 
 db.connect();
 
+// Middleware
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.static("public"));
+
+
 // I'm going to try fetching all data and displaying it in a table just so we can make sure we have the data
 
 db.query("SELECT * FROM books", (err, res) => {
