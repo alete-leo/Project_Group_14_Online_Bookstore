@@ -1,9 +1,11 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import App from "./components/App";
-import "./../public/styles.css";
+// updated from index.js to server.js
 
-import Client from "pg";
+import express from "express";
+import bodyParser from "body-parser";
+import pg from "pg";
+
+const app = express();
+const port = 3000;
 
 const db = new pg.Client({
     user: "postgres",
@@ -23,5 +25,5 @@ db.query("SELECT * FROM books", (err, res) => {
 })
 
 
-ReactDOM.render(<App />, document.getElementById("root"));
-// sample+3
+// ReactDOM.render(<App />, document.getElementById("root"));
+// sample
