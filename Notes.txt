@@ -1,6 +1,9 @@
 To start the development server, run: npm run dev in the react app
 Accessible at http://localhost:5173/
 
+node index.js
+to start the service that can query the database
+
 I've moved some things around from the original react build, so it may not be functional currently.
 For our database, we'll likely have to store our SQL scripts we used and individually run our own actual database. 
 I'll get the code linking the project to the database in later. 
