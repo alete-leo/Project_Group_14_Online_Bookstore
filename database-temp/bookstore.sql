@@ -26,11 +26,17 @@ CREATE TABLE authors (
   PRIMARY KEY (id)
 );
 
+INSERT INTO authors VALUES (1, 'Tester Mann');
 
 
 CREATE TABLE reviews (
   id INT,
-  user_id INT,
+  book_id INT,
+  review_value INT,
+  username VARCHAR(255),
   review_text VARCHAR(255),
   PRIMARY KEY (id)
 );
+
+INSERT INTO reviews VALUES (1, 1, 10, 'First Reviewer', 'This is a great book!');
+
