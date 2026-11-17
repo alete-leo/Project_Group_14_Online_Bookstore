@@ -4,6 +4,7 @@
 //import viteLogo from '../assets/vite.svg'
 import '../assets/App.css'
 //import '.../public/styles.css'
+import Navbar from "./Navbar";
 
 
 
@@ -12,7 +13,12 @@ import BookList from "./BookList";
 
 class App extends React.Component {
   render() {
-    return <BookList />;
+    return (
+    <>
+      <Navbar />
+      <BookList />
+    </>
+    );
   }
 }
 
