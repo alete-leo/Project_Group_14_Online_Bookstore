@@ -1,12 +1,20 @@
+Files in development:
+server/server.js - handling the queries to the database. So far has for the books. 
+my-react-app/src/components/App.jsx
+my-react-app/src/components/BookList.jsx - the current default page displaying the books in the database
+database-temp/bookstore.sql - all code we need to be unified on our database info
+
+
+
+
+
 To start the development server, run: npm run dev in the react app
 Accessible at http://localhost:5173/
 
-nodemon index.js
-to start the service that can query the database
-
-I've moved some things around from the original react build, so it may not be functional currently.
+I've moved some things around from the original react build.
 For our database, we'll likely have to store our SQL scripts we used and individually run our own actual database. 
-I'll get the code linking the project to the database in later. 
+
+When you run the project, the React page at http://localhost:5173/ displays the books and their info. 
 
 
 cd .\my-react-app\

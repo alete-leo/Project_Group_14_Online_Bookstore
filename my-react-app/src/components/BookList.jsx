@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from "react";
 
-function FunctionalComponent() {
+function BookList() {
 
   const [books, setBooks] = useState([]);
 
@@ -19,8 +19,9 @@ function FunctionalComponent() {
 
       {books.map((book) => (
         <div key={book.id}>
-          <h2>{book.title}</h2>
-          <p>{book.author}</p>
+          <h2>Title: {book.title}</h2>
+          <p>Author ID: {book.author_id}</p>
+          <p>Book ID: {book.id}</p>
         </div>
       ))}
 

@@ -6,7 +6,7 @@ import pg from "pg";
 
 const app = express();
 const port = 3000;
-
+import cors from "cors";
 
 //app.get("/api", (req, res) => {
 //    res.json({})
@@ -29,6 +29,8 @@ db.connect();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
+app.use(cors());
+
 
 // I'm going to try fetching all data and displaying it in a table just so we can make sure we have the data
 
@@ -37,13 +39,28 @@ app.use(express.static("public"));
 
 // getting books
 
+app.get("/", (req, res) => {
+    res.send("");
+});
+
 app.get("/books", async (req, res) => {
   const result = await db.query("SELECT * FROM books");
-
   const books = result.rows;
-
   res.json(books);
 });
+
+app.get("/authors", async (req, res) => {
+  const result = await db.query("SELECT * FROM authors");
+  const authors = result.rows;
+  res.json(authors);
+});
+
+app.get("/reviews", async (req, res) => {
+  const result = await db.query("SELECT * FROM reviews");
+  const reviews = result.rows;
+  res.json(reviews);
+});
+
 
 app.listen(port, () => {
   console.log(`Server running on http://localhost:${port}`);

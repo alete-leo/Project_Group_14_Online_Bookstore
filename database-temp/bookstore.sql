@@ -12,15 +12,17 @@ CREATE DATABASE "BookstoreDB" (
 CREATE TABLE books (
   id INT,
   author_id INT,
-  title STRING,
+  title VARCHAR(255),
   PRIMARY KEY (id)
 );
 
- -- values
+INSERT INTO books VALUES (1, 1, 'The Test Book');
 
-CREATE TABLE users (
+
+
+CREATE TABLE authors (
   id INT,
-  username STRING,
+  username VARCHAR(255),
   PRIMARY KEY (id)
 );
 
@@ -29,6 +31,6 @@ CREATE TABLE users (
 CREATE TABLE reviews (
   id INT,
   user_id INT,
-  review_text STRING,
+  review_text VARCHAR(255),
   PRIMARY KEY (id)
 );
